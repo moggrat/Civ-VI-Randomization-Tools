@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Civ VI: Civ Randomizer</title>
+	<meta name="description" content="A Civ VI map option randomizer.">
+	<meta name="author" content="Luke Scott">
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="flexbox.css">
+</head>
+<body>
+
+<h1><a href="./index.html">Civilization VI Shuffle &amp; Randomization</a></h1>
+
+<h1>Regional Civilization Randomizer</h1>
+
+
+<div class="flex-container">
+
+	<div  id="boxedheaderciv" class="boxedoption">NA civs: <input type="number" inputmode="numeric" id="naNum" min="1" max="5" value="1">
+	<div id="na"></div></div>
+
+	<div  id="boxedheaderciv" class="boxedoption">SA civs: <input type="number" inputmode="numeric" id="saNum" min="1" max="5" value="1">
+	<div id="sa"></div></div>
+
+	<div  id="boxedheaderciv" class="boxedoption">EUR civs: <input type="number" inputmode="numeric" id="eurNum" min="1" max="5" value="1">
+	<div id="eur"></div></div>
+
+	<div  id="boxedheaderciv" class="boxedoption">AFR civs: <input type="number" inputmode="numeric" id="afrNum" min="1" max="5" value="1">
+	<div id="afr"></div></div>
+
+	<div  id="boxedheaderciv" class="boxedoption">ASIA civs: <input type="number" inputmode="numeric" id="asiaNum" min="1" max="5" value="1">
+	<div id="asia"></div></div>
+
+	<div  id="boxedheaderciv" class="boxedoption">OCE civs: <input type="number" inputmode="numeric" id="oceNum" min="1" max="5" value="1">
+	<div id="oce"></div></div>
+
+</div>
+
+<div class="boxedoption"><button onclick="createRdmCivs()">Click me</button><p></p></div>
+	<div class="boxedoption"><footer style="text-align:center;">2020, Luke Scott</footer></div>
+
+
+<script type="text/javascript" src="assets_civshuffle/civs.js"></script>
+<script type="text/javascript" src="assets_civshuffle/civshuffler.js"></script>
+
+
+</body>
+</html>

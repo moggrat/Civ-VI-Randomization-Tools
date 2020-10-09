@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Civ VI: Map Randomizer</title>
+	<meta name="description" content="A Civ VI map option randomizer.">
+	<meta name="author" content="Luke Scott">
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="flexbox.css">
+
+</head>
+<body>
+
+	<h1><a href="./index.html">Civilization VI Shuffle &amp; Randomizer</a></h1>
+
+	<h1>Map Randomizer</h1>
+	<div class="flex-container">
+	<div id="boxedheadermap">
+		<div class="boxedoption"><h2>Options</h2></div>
+
+		<div class="boxedoption"><p id="mapp"><button onclick='mapshuffleFunc()'>!</button><b>Map: </b></p></div>
+		<div class="boxedoption"><p id="sizep"><button onclick='sizeshuffleFunc()'>!</button><b>Size and Civs: </b></p></div>
+		<div class="boxedoption"><p id="gspeedp"><button onclick='gamespeedFunc()'>!</button><b>Game Speed: </b></p></div>
+		<div class="boxedoption"><p id="gmodep"><button onclick='gamemodeFunc()'>!</button><b>Game Modes: </b></p></div>
+		<div class="boxedoption"><p id="distip"><button onclick='disasterFunc()'>!</button><b>Disaster Intensity 0-4(Default 2): </b></p></div>
+
+		<div class="boxedoption"><p id="serap"><button onclick='starteraFunc()'>!</button><b>Start era: </b></p></div>
+
+		<div class="boxedoption"><p><button onclick='runallmapFuncs()'>Shuffle "Basic" Options!</button></p></div>
+	</div>
+	<!-- Extra Options -->
+
+	<div id="boxedheadermap">
+		<div class="boxedoption" ><h2>Extra Options</h2></div>
+
+		<div class="boxedoption"><p id="resourcesp"><button onclick='resourcesFunc()'>!</button><b>Resources: </b></p></div>
+		<div class="boxedoption"><p id="worldagep"><button onclick='worldageFunc()'>!</button><b>World Age: </b></p></div>
+		<div class="boxedoption"><p id="startposp"><button onclick='startposFunc()'>!</button><b>Start Position: </b></p></div>
+		<div class="boxedoption"><p id="temperaturep"><button onclick='temperatureFunc()'>!</button><b>Temperature: </b></p></div>
+		<div class="boxedoption"><p id="rainfallp"><button onclick='rainfallFunc()'>!</button><b>Rainfall: </b></p></div>
+		<div class="boxedoption"><p id="sealevelp"><button onclick='sealevelFunc()'>!</button><b>Sea Level: </b></p></div>
+
+		<div class="boxedoption"><p><b>Nat Wonders (Not finished)</b></p></div>
+
+		<div class="boxedoption"><p><button onclick="runallextramapFunc()">Shuffle "Advanced" Options!</button></p></div>
+	</div>
+	</div>
+	<div class="boxedoption"><footer style="text-align:center;">2020, Luke Scott</footer></div>
+
+	<script src="assets_mapshuffle/mapoptions.js"></script>
+	<script src="assets_mapshuffle/extramapoptions.js"></script>
+
+</body>
+</html>
+
+
+
