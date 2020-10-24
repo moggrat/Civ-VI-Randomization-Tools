@@ -1,3 +1,4 @@
+//Map Types
 const mapsarray = [
 	"Continents",
 	"Fractral",
@@ -25,6 +26,7 @@ const mapsarray = [
 	"Tilted Axis",
 	"Highlands"
 	];
+//Map sizes
 const mapsizearray = [
 	"Duel",
 	"Tiny",
@@ -33,6 +35,7 @@ const mapsizearray = [
 	"Large",
 	"Huge"
 	];
+// game speeds
 const gamespeedsarray = [
 	"Marathon",
 	"Epic",
@@ -40,6 +43,7 @@ const gamespeedsarray = [
 	"Quick",
 	"Online"
 	];
+//game start era
 const gamestarteras = [ //cant start in "Future Era"
 	"Ancient Era",
 	"Classical Era",
@@ -54,34 +58,42 @@ const gamestarteras = [ //cant start in "Future Era"
 
 function mapshuffleFunc() 
 {
+	//a random map from map type is chosen
 	let maprng = mapsarray[Math.floor(Math.random() * mapsarray.length)];
 	document.getElementById("mapp").innerHTML = "<button onclick='mapshuffleFunc()'>!</button><b>Map: </b>" + maprng;
 }	
 
 function sizeshuffleFunc() 
 {	
+	//map size is randomly chosen 
 	let sizrng = mapsizearray[Math.floor(Math.random() * mapsizearray.length)];
+	
+	//variables for players(random number) and city states(random number) 
 	let playersrn;
 	let cstate;
+	
+	//depending on the size of the map choose a random number of civs and city states
+	//random is *x players starting from +y
+	//eg Math.random() * 3) + 2 can have numbers 2 3 4
 	switch(sizrng) 
 	{
 		case "Duel":
-			playersrn = Math.floor(Math.random() * 3) + 2
+			playersrn = Math.floor(Math.random() * 3) + 2 //2-4 players
 			break;
 		case "Tiny":
-			playersrn = Math.floor(Math.random() * 3) + 4
+			playersrn = Math.floor(Math.random() * 3) + 4 //4-6 players
 			break;
 		case "Small":
-			playersrn = Math.floor(Math.random() * 5) + 6
+			playersrn = Math.floor(Math.random() * 5) + 6 //6-10
 			break;
 		case "Standard":
-			playersrn = Math.floor(Math.random() * 7) + 8
+			playersrn = Math.floor(Math.random() * 7) + 8 //8-14
 			break;
 		case "Large":
-			playersrn = Math.floor(Math.random() * 7) + 10
+			playersrn = Math.floor(Math.random() * 7) + 10 //10-16
 			break;
 		case "Huge":
-			playersrn = Math.floor(Math.random() * 9) + 12
+			playersrn = Math.floor(Math.random() * 9) + 12 //12-24
 			break;
 		default:
 			playersrn = "Error"
@@ -89,23 +101,23 @@ function sizeshuffleFunc()
 		switch(sizrng) 
 		{
 			case "Duel":
-				cstate = Math.floor(Math.random() * 4) + 3
+				cstate = Math.floor(Math.random() * 4) + 3 //3-6
 				break;
 			case "Tiny":
-				cstate = Math.floor(Math.random() * 5) + 6
+				cstate = Math.floor(Math.random() * 5) + 6 //6-10
 				break;
 			case "Small":
-				cstate = Math.floor(Math.random() * 6) + 9
+				cstate = Math.floor(Math.random() * 6) + 9 //9-14
 				break;
 			case "Standard":
-				cstate = Math.floor(Math.random() * 7) + 12
+				cstate = Math.floor(Math.random() * 7) + 12 //12-18
 				break;
 			case "Large":
-				cstate = Math.floor(Math.random() * 8) + 15
+				cstate = Math.floor(Math.random() * 8) + 15 //15-22
 				break;
 			case "Huge":
-				cstate = Math.floor(Math.random() * 7) + 18
-				break;
+				cstate = Math.floor(Math.random() * 7) + 18 //18-24
+				break; 
 			default:
 				playersrn = "Error"
 		} 
@@ -121,11 +133,16 @@ function gamespeedFunc()
 
 function gamemodeFunc()
 {
-	let rngmodes = "";
-	let ra = Math.floor(Math.random() * 2);
-	let rss = Math.floor(Math.random() * 2);
-	let rtcs = Math.floor(Math.random() * 2);
-	let rda = Math.floor(Math.random() * 2);
+	let rngmodes = ""; 
+	
+	//variables that store 0,1 binary values to determine if each mode is used
+	//this code has room for improvement (such as a constant array of modes)
+	let ra = Math.floor(Math.random() * 2); //apocalypse mode
+	let rss = Math.floor(Math.random() * 2); //secret societies mode
+	let rtcs = Math.floor(Math.random() * 2); //tech and civic shuffle mode
+	let rda = Math.floor(Math.random() * 2); //dramatic ages mode
+	
+	
 	if (ra > 0) rngmodes = "Apocalypse, ";
 	if (rss > 0) rngmodes += "Secret Societies, ";
 	if (rtcs > 0) rngmodes +=  "Tech and Civic Shuffle, ";
@@ -146,6 +163,7 @@ function starteraFunc()
 }
 function runallmapFuncs()
 {
+	//run all functions needed for successful map generation
 	mapshuffleFunc();
 	sizeshuffleFunc();
 	gamespeedFunc();

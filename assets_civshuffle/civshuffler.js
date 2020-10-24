@@ -1,4 +1,5 @@
 
+//arrays to be populated with civs from each region
 let na = [];
 let sa = [];
 let eur = [];
@@ -8,10 +9,12 @@ let oce = [];
 
 loadCivs();
 
+//loads civs into arrays at the start of this file
+//Some civs have the value of EURASIA for their continent(Region) and are randomly sorted into either europe or asia.
 function loadCivs()
 {
-	for (let i = 0; i < myObj.civs.length; i++) {
-		var objCiv = myObj.civs[i];
+	for (let i = 0; i < civsA.civs.length; i++) {
+		var objCiv = civsA.civs[i];
 		switch(objCiv.continent)
 		{
 			case "NA":
@@ -45,7 +48,7 @@ function loadCivs()
 		}
 	}
 
-
+	//max set for number incrementation on html input "field"
 	document.getElementById("naNum").max = na.length;
 	document.getElementById("saNum").max = sa.length;
 	document.getElementById("eurNum").max = eur.length;

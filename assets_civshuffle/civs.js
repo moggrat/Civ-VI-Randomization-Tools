@@ -1,4 +1,10 @@
-myObj = {
+//Civs continent should be renamed to region at a later date
+
+//Countries/Nations of the Civs in CIV VI in real life may span over multiple continents/regions. 
+//The civs continents/regions in this list are more based around starting positions in TSL games in CIV VI.
+
+
+civsA = {
 	"civs": [
 		{
 			"civ": "American",

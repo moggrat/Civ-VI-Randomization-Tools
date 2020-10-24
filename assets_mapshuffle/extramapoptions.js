@@ -1,11 +1,16 @@
+
+//const arrays of map options found from
 //https://civilization.fandom.com/wiki/Starting_a_new_game_(Civ6)
+
 const resourcesa =["Sparse","Standard","Abundant","Random",];
 const worldagea =["New","Standard","Old","Random"];
 const startposa=["Balanced","Standard","Legendary"];
 const temperaturea =["Hot","Standard","Cold","Random"];
 const rainfalla =["Arid","Standard","Wet","Random"];
 const sealevela =["Low","Standard","High","Random"];
-//var Nat Wonders =[];
+//var Nat Wonders =[]; //to be implemented later
+
+//maybe look into adding scenarios too
 
 function resourcesFunc() 
 {
@@ -39,6 +44,7 @@ function sealevelFunc()
 }
 function runallextramapFunc() 
 {
+	//runs all functions needed for successful map generation
 	resourcesFunc(); 
 	worldageFunc() ;
 	startposFunc() ;
