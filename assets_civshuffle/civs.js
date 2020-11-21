@@ -27,6 +27,11 @@ civsA = {
 			"continent": "NA"
 		},
 		{
+			"civ": "Babylonian",
+			"dlc": "CiBaby",
+			"continent": "ASIA"
+		},
+		{
 			"civ": "Brazilian",
 			"dlc": "no",
 			"continent": "SA"
