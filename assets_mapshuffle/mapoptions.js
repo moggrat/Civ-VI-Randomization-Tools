@@ -141,12 +141,13 @@ function gamemodeFunc()
 	let rss = Math.floor(Math.random() * 2); //secret societies mode
 	let rtcs = Math.floor(Math.random() * 2); //tech and civic shuffle mode
 	let rda = Math.floor(Math.random() * 2); //dramatic ages mode
-	
+	let rhl = Math.floor(Math.random() * 2); //Heroes & Legends mode
 	
 	if (ra > 0) rngmodes = "Apocalypse, ";
 	if (rss > 0) rngmodes += "Secret Societies, ";
 	if (rtcs > 0) rngmodes +=  "Tech and Civic Shuffle, ";
-	if (rda > 0) rngmodes +=  "Dramatic Ages";
+	if (rda > 0) rngmodes +=  "Dramatic Ages, ";
+	if (rhl > 0) rngmodes +=  "Heroes & Legends mode";
 	document.getElementById("gmodep").innerHTML = "<button onclick='gamemodeFunc()'>!</button><b>Game Modes: </b>" + rngmodes;	
 }
 function disasterFunc()
