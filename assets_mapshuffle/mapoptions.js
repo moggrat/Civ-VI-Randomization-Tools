@@ -52,30 +52,30 @@ const gamestarteras = [ //cant start in "Future Era"
 	"Industrial Era",
 	"Modern Era",
 	"Atomic Era",
-	"Information Era" 
-	]; 
+	"Information Era"
+	];
 
 
-function mapshuffleFunc() 
+function mapshuffleFunc()
 {
 	//a random map from map type is chosen
 	let maprng = mapsarray[Math.floor(Math.random() * mapsarray.length)];
 	document.getElementById("mapp").innerHTML = "<button onclick='mapshuffleFunc()'>!</button><b>Map: </b>" + maprng;
-}	
+}
 
-function sizeshuffleFunc() 
-{	
-	//map size is randomly chosen 
+function sizeshuffleFunc()
+{
+	//map size is randomly chosen
 	let sizrng = mapsizearray[Math.floor(Math.random() * mapsizearray.length)];
-	
-	//variables for players(random number) and city states(random number) 
+
+	//variables for players(random number) and city states(random number)
 	let playersrn;
 	let cstate;
-	
+
 	//depending on the size of the map choose a random number of civs and city states
 	//random is *x players starting from +y
 	//eg Math.random() * 3) + 2 can have numbers 2 3 4
-	switch(sizrng) 
+	switch(sizrng)
 	{
 		case "Duel":
 			playersrn = Math.floor(Math.random() * 3) + 2 //2-4 players
@@ -97,8 +97,8 @@ function sizeshuffleFunc()
 			break;
 		default:
 			playersrn = "Error"
-		} 
-		switch(sizrng) 
+		}
+		switch(sizrng)
 		{
 			case "Duel":
 				cstate = Math.floor(Math.random() * 4) + 3 //3-6
@@ -117,10 +117,10 @@ function sizeshuffleFunc()
 				break;
 			case "Huge":
 				cstate = Math.floor(Math.random() * 7) + 18 //18-24
-				break; 
+				break;
 			default:
 				playersrn = "Error"
-		} 
+		}
 		document.getElementById("sizep").innerHTML = "<button onclick='sizeshuffleFunc()'>!</button><b>Size and Civs: </b>" + sizrng + " Map, " + playersrn + " Civs, " + cstate + " City-States";
 
 	}
@@ -133,8 +133,8 @@ function gamespeedFunc()
 
 function gamemodeFunc()
 {
-	let rngmodes = ""; 
-	
+	let rngmodes = "";
+
 	//variables that store 0,1 binary values to determine if each mode is used
 	//this code has room for improvement (such as a constant array of modes)
 	let ra = Math.floor(Math.random() * 2); //apocalypse mode
@@ -142,24 +142,27 @@ function gamemodeFunc()
 	let rtcs = Math.floor(Math.random() * 2); //tech and civic shuffle mode
 	let rda = Math.floor(Math.random() * 2); //dramatic ages mode
 	let rhl = Math.floor(Math.random() * 2); //Heroes & Legends mode
-	
+    let rmc = Math.floor(Math.random() * 2); // Monopolies and Corporations mode
+
 	if (ra > 0) rngmodes = "Apocalypse, ";
 	if (rss > 0) rngmodes += "Secret Societies, ";
 	if (rtcs > 0) rngmodes +=  "Tech and Civic Shuffle, ";
 	if (rda > 0) rngmodes +=  "Dramatic Ages, ";
-	if (rhl > 0) rngmodes +=  "Heroes & Legends mode";
-	document.getElementById("gmodep").innerHTML = "<button onclick='gamemodeFunc()'>!</button><b>Game Modes: </b>" + rngmodes;	
+	if (rhl > 0) rngmodes +=  "Heroes & Legends, ";
+    if (rmc > 0) rngmodes +=  "Monopolies and Corporations";
+
+	document.getElementById("gmodep").innerHTML = "<button onclick='gamemodeFunc()'>!</button><b>Game Modes: </b>" + rngmodes;
 }
 function disasterFunc()
 {
 	let distIntensity = Math.floor(Math.random() * 5);
-	document.getElementById("distip").innerHTML = "<button onclick='disasterFunc()'>!</button><b>Disaster Intensity 0-4(Default 2): </b>" + distIntensity;	
+	document.getElementById("distip").innerHTML = "<button onclick='disasterFunc()'>!</button><b>Disaster Intensity 0-4(Default 2): </b>" + distIntensity;
 
 }
 function starteraFunc()
 {
 	let sera = gamestarteras[Math.floor(Math.random() * gamestarteras.length)];
-	document.getElementById("serap").innerHTML ="<button onclick='starteraFunc()'>!</button><b>Start era: </b>" + sera;	
+	document.getElementById("serap").innerHTML ="<button onclick='starteraFunc()'>!</button><b>Start era: </b>" + sera;
 
 }
 function runallmapFuncs()
@@ -172,4 +175,3 @@ function runallmapFuncs()
 	disasterFunc();
 	starteraFunc();
 }
-	
