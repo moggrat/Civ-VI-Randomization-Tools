@@ -142,15 +142,18 @@ function gamemodeFunc()
 	let rtcs = Math.floor(Math.random() * 2); //tech and civic shuffle mode
 	let rda = Math.floor(Math.random() * 2); //dramatic ages mode
 	let rhl = Math.floor(Math.random() * 2); //Heroes & Legends mode
-    let rmc = Math.floor(Math.random() * 2); // Monopolies and Corporations mode
+    	let rmc = Math.floor(Math.random() * 2); // Monopolies and Corporations mode
+    	let rmbc = Math.floor(Math.random() * 2); //barbarian clans mode
 
 	if (ra > 0) rngmodes = "Apocalypse, ";
 	if (rss > 0) rngmodes += "Secret Societies, ";
 	if (rtcs > 0) rngmodes +=  "Tech and Civic Shuffle, ";
 	if (rda > 0) rngmodes +=  "Dramatic Ages, ";
 	if (rhl > 0) rngmodes +=  "Heroes & Legends, ";
-    if (rmc > 0) rngmodes +=  "Monopolies and Corporations";
+    	if (rmc > 0) rngmodes +=  "Monopolies and Corporations, ";
+    	if (rmbc > 0) rngmodes +=  "Barbarian Clans";
 
+	
 	document.getElementById("gmodep").innerHTML = "<button onclick='gamemodeFunc()'>!</button><b>Game Modes: </b>" + rngmodes;
 }
 function disasterFunc()
