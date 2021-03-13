@@ -99,30 +99,34 @@ input {
 		width: 100%;
 
 	}
+    p, input, button {font-size: 20px}
 }
 @media (orientation: portrait){
 	#boxedheadermap
 	{
 		margin-top: 30px;
 		width: 100%;
-
 	}
+    p, input, button {font-size: 20px}
+
 }
 @media only screen and (max-width: 1200px) {
 	#boxedheaderciv
 	{
 		width: 100%;
         height: auto;
-
 	}
+    p, input, button {font-size: 20px}
+
 }
 @media (orientation: portrait){
 	#boxedheaderciv
 	{
 		width: 100%;
         height: auto;
-
 	}
+    p, input, button {font-size: 20px}
+
 }
 
 /*
