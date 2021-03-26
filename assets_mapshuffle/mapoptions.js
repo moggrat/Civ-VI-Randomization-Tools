@@ -137,6 +137,7 @@ function gamemodeFunc()
 
 	//variables that store 0,1 binary values to determine if each mode is used
 	//this code has room for improvement (such as a constant array of modes)
+	//THIS CODE IS BAD BUT IM LAZY AND WILL BE LEAVING THIS PAGE AS LEGACY SOON
 	let ra = Math.floor(Math.random() * 2); //apocalypse mode
 	let rss = Math.floor(Math.random() * 2); //secret societies mode
 	let rtcs = Math.floor(Math.random() * 2); //tech and civic shuffle mode
@@ -144,14 +145,18 @@ function gamemodeFunc()
 	let rhl = Math.floor(Math.random() * 2); //Heroes & Legends mode
     	let rmc = Math.floor(Math.random() * 2); // Monopolies and Corporations mode
     	let rmbc = Math.floor(Math.random() * 2); //barbarian clans mode
-
+	let rzd = Math.floor(Math.random() * 2); //Zombie Defense
+	
+	//also bad due to left over ,
+	// but like I said I dont care 
 	if (ra > 0) rngmodes = "Apocalypse, ";
 	if (rss > 0) rngmodes += "Secret Societies, ";
 	if (rtcs > 0) rngmodes +=  "Tech and Civic Shuffle, ";
 	if (rda > 0) rngmodes +=  "Dramatic Ages, ";
 	if (rhl > 0) rngmodes +=  "Heroes & Legends, ";
     	if (rmc > 0) rngmodes +=  "Monopolies and Corporations, ";
-    	if (rmbc > 0) rngmodes +=  "Barbarian Clans";
+    	if (rmbc > 0) rngmodes +=  "Barbarian Clans, ";
+    	if (rzd > 0) rngmodes +=  "Zombie Defense";
 
 	
 	document.getElementById("gmodep").innerHTML = "<button onclick='gamemodeFunc()'>!</button><b>Game Modes: </b>" + rngmodes;
