@@ -241,11 +241,16 @@ civsA = {
 			"dlc": "GS",
 			"continent": "EUR"
 		},
-        {
-            "civ": "Vietnam",
-            "dlc": "CiViet",
-            "continent": "ASIA"
-        },
+		{
+		    "civ": "Vietnam",
+		    "dlc": "CiViet",
+		    "continent": "ASIA"
+		},
+		{
+		    "civ": "Portugal",
+		    "dlc": "CiPort",
+		    "continent": "EUR"
+		},
 		{
 			"civ": "Zulu",
 			"dlc": "no",
