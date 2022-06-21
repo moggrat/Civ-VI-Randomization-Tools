@@ -129,14 +129,39 @@ input {
 
 }
 
-/*
+/* NEW OVERRIDE CSS */
+/* COULD DO WITH FULL CSS CLEAN UP BUT NOT WORTH IT FOR AN ABONDONED WEB TOOL */
 
-background 0D3455
-menu background  0C2B47
-font FFFFFF
-font2 0C2B47
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Serif:wght@700&display=swap');
 
-gold 897134 5E502B
+*{box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+body{font-family: 'Noto Sans', sans-serif;padding:0 20px;border:0;margin:0;}
+
+.boxedoption {max-width: 960px;padding:10px 20px;}
+
+.x-container.map {max-width: 960px;margin:auto;display: grid;grid-template-columns: 1fr 1fr; gap:20px;}
+.x-container.map #boxedheadermap {width:100%;height: 100%;}
+.x-container.map #boxedheadermap .boxedoption button { width:32px;  height:32px; display: inline-block; border-radius:50%; }
+.x-container.map #boxedheadermap .boxedoption button[onclick="runallextramapFunc()"]{width:100%;border-radius:15px;height: 50px;}
+.x-container.map #boxedheadermap .boxedoption button[onclick="runallmapFuncs()"]{width:100%;border-radius:15px;height: 50px;}
+
+.x-container.civs {max-width: 960px;margin:auto;display: grid;grid-template-columns: 1fr 1fr 1fr; gap:20px;}
+.x-container.civs #boxedheaderciv {width:100%;min-height: unset;height:100%;}
+.x-container.civs #boxedheaderciv input[type=number] {-moz-appearance:textfield;}
+.x-container.civs #boxedheaderciv input::-webkit-outer-spin-button,
+.x-container.civs #boxedheaderciv input::-webkit-inner-spin-button {/* display: none; <- Crashes Chrome on hover */-webkit-appearance: none;margin: 0; /* <-- Apparently some margin are still there even though it's hidden */}
+.x-container.civs #boxedheaderciv input{border: 0px;margin: 10px 0px;display: block;width: 100%;border-radius: 15px;}
+button[onclick="createRdmCivs()"]{width:100%;border-radius:15px;height: 50px;}
+
+@media only screen and (max-width:1000px) {
+.x-container.maps #boxedheadermap *, #boxedheadermap b {font-weight: 500;font-size:16px;}
+ 
+}
+@media only screen and (max-width:800px) {
+ .x-container.civs {grid-template-columns: 1fr;}
+ .x-container.map {grid-template-columns: 1fr;}
+
+} 
 
 
-*/
+
